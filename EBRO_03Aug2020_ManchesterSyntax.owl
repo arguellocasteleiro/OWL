@@ -1,0 +1,1913 @@
+Prefix: obo: <http://purl.obolibrary.org/obo/#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: sct: <http://snomed.info/sct/>
+Prefix: sio: <http://semanticscience.org/resource/>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: ebro: <http://semdeep.cs.man.ac.uk/owl/ebro/>
+Prefix: mesh: <https://id.nlm.nih.gov/mesh/>
+Prefix: pico: <http://data.cochrane.org/ontologies/pico/>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: umls: <https://www.nlm.nih.gov/research/umls/>
+Prefix: lemon: <http://lemon-model.net/lemon/#>
+Prefix: rxnorm: <http://www.nlm.nih.gov/research/umls/rxnorm/>
+Prefix: ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+Prefix: oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+
+
+Ontology: <http://semdeep.cs.man.ac.uk/owl/ebro>
+<http://semdeep.cs.man.ac.uk/owl/ebro.owl>
+
+Annotations: 
+    rdfs:comment "Evidence-Based Recommendation ontology (EBRO)  (version 2.2) 03 August 2020"@en
+
+AnnotationProperty: obo:IAO_0000115
+
+    Annotations: 
+        rdfs:label "definition"@en
+    
+    Annotations: 
+        rdfs:label "definition"@en
+    
+    
+AnnotationProperty: oboInOwl:hasExactSynonym
+
+    Annotations: 
+        rdfs:label "has exact synonym"@en
+    
+    Annotations: 
+        rdfs:label "has exact synonym"@en
+    
+    
+AnnotationProperty: oboInOwl:hasNarrowSynonym
+
+    Annotations: 
+        rdfs:label "has narrow synonym"@en
+    
+    Annotations: 
+        rdfs:label "has narrow synonym"@en
+    
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: sio:SIO_000628
+
+    Annotations: 
+        rdfs:label "refers to"@en,
+        obo:IAO_0000115 "refers to is a relation between one entity and the entity that it makes reference to."@en
+    
+    Range: 
+        ontolex:LexicalConcept
+    
+    SubPropertyOf: 
+        sio:SIO_000001
+    
+    
+ObjectProperty: skos:exactMatch
+
+    Characteristics: 
+        Symmetric
+    
+    SubPropertyOf: 
+        skos:closeMatch
+    
+    
+ObjectProperty: ontolex:evokes
+
+    Annotations: 
+        rdfs:label "evokes"@en
+    
+    Range: 
+        ontolex:LexicalConcept
+    
+    
+ObjectProperty: ontolex:denotes
+
+    Annotations: 
+        rdfs:label "denotes"@en,
+        rdfs:comment "The denotes property relates a lexical entry to a predicate in a given ontology that represents its meaning and has some denotational or model-theoretic semantics."@en
+    
+    
+ObjectProperty: sio:SIO_000001
+
+    Annotations: 
+        obo:IAO_0000115 "A is related to B iff there is some relation between A and B."@en,
+        rdfs:label "is related to"@en
+    
+    Characteristics: 
+        Symmetric
+    
+    
+ObjectProperty: ebro:recommends
+
+    Annotations: 
+        rdfs:label "recommends"@en
+    
+    Domain: 
+        ebro:EBRO_000
+    
+    Range: 
+        ebro:EBRO_012
+    
+    
+ObjectProperty: ebro:influences
+
+    Annotations: 
+        rdfs:label "influences"@en
+    
+    EquivalentTo: 
+        obo:RO_0002566
+    
+    
+ObjectProperty: ebro:associatedWith
+
+    EquivalentTo: 
+        sio:SIO_001403
+    
+    
+ObjectProperty: obo:RO_0002410
+
+    Annotations: 
+        rdfs:comment "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect."@en,
+        rdfs:label "causally related to"
+    
+    SubPropertyOf: 
+        sio:SIO_001403
+    
+    
+ObjectProperty: skos:mappingRelation
+
+    Annotations: 
+        obo:IAO_0000115 "Relates two concepts coming, by convention, from different schemes, and that have comparable meanings"@en,
+        rdfs:label "is in mapping relation with"@en,
+        rdfs:label "has exact match"@en,
+        obo:IAO_0000115 "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch"@en
+    
+    SubPropertyOf: 
+        skos:semanticRelation
+    
+    
+ObjectProperty: obo:IAO_0000136
+
+    Annotations: 
+        rdfs:label "is about"@en
+    
+    Domain: 
+        obo:IAO_0000030
+    
+    EquivalentTo: 
+        ebro:isAbout
+    
+    
+ObjectProperty: ebro:isAbout
+
+    Annotations: 
+        rdfs:label "isAbout"@en
+    
+    EquivalentTo: 
+        obo:IAO_0000136
+    
+    
+ObjectProperty: sio:SIO_001404
+
+    Annotations: 
+        obo:IAO_0000115 "x is correlated with y when x holds a statistical relationship with y"@en,
+        rdfs:label "is correlated with"@en
+    
+    SubPropertyOf: 
+        sio:SIO_001403
+    
+    
+ObjectProperty: sio:SIO_001403
+
+    Annotations: 
+        obo:IAO_0000115 "x is associated with y when x and y are logically or statistically related to one another."@en,
+        rdfs:label "is associated with"@en
+    
+    SubPropertyOf: 
+        sio:SIO_000001
+    
+    EquivalentTo: 
+        ebro:associatedWith
+    
+    
+ObjectProperty: ontolex:sense
+
+    Annotations: 
+        rdfs:label "sense"@en
+    
+    Domain: 
+        ontolex:LexicalEntry
+    
+    Range: 
+        ontolex:LexicalSense
+    
+    
+ObjectProperty: skos:closeMatch
+
+    Annotations: 
+        obo:IAO_0000115 "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of 'compound errors' when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property."@en,
+        rdfs:label "has close match"@en
+    
+    Characteristics: 
+        Symmetric
+    
+    SubPropertyOf: 
+        skos:mappingRelation
+    
+    
+ObjectProperty: ebro:determines
+
+    Annotations: 
+        rdfs:label "determines"@en
+    
+    EquivalentTo: 
+        obo:RO_0002508
+    
+    
+ObjectProperty: obo:RO_0002558
+
+    Annotations: 
+        obo:IAO_0000115 "inverse of is evidence for",
+        rdfs:comment "x has evidence y iff , x is  an information content entity, material entity or process, and y supports either the existence of x, or the truth value of x.",
+        rdfs:label "has evidence"
+    
+    InverseOf: 
+        obo:RO_0002472
+    
+    
+ObjectProperty: skos:semanticRelation
+
+    Annotations: 
+        rdfs:label "is in semantic relation with"@en,
+        obo:IAO_0000115 "Links a concept to a concept related by meaning."@en
+    
+    
+ObjectProperty: obo:BFO_0000050
+
+    Annotations: 
+        rdfs:label "part of"@en,
+        obo:IAO_0000115 "A core relation that holds between a part and its whole."@en
+    
+    InverseOf: 
+        obo:BFO_0000051
+    
+    
+ObjectProperty: obo:BFO_0000055
+
+    Annotations: 
+        rdfs:label "realizes"@en,
+        rdfs:comment "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process. For example: this disease course realizes this disease."@en
+    
+    Domain: 
+        obo:BFO_0000015
+    
+    Range: 
+        obo:BFO_0000017
+    
+    
+ObjectProperty: ebro:xref
+
+    Annotations: 
+        rdfs:label "xref"@en,
+        rdfs:comment "a cross reference that is the outcome of a semantic mapping"@en
+    
+    
+ObjectProperty: obo:BFO_0000051
+
+    Annotations: 
+        obo:IAO_0000115 "A core relation that holds between a whole and its part."@en,
+        rdfs:label "has part"@en
+    
+    InverseOf: 
+        obo:BFO_0000050
+    
+    
+ObjectProperty: obo:RO_0002472
+
+    Annotations: 
+        rdfs:label "is evidence for",
+        obo:IAO_0000115 "A relationship between a piece of evidence a and some entity b, where b is  an information content entity, material entity or process, and the a supports either the existence of b, or the truth value of b."
+    
+    InverseOf: 
+        obo:RO_0002558
+    
+    
+ObjectProperty: obo:RO_0002508
+
+    Annotations: 
+        rdfs:label "determines"
+    
+    SubPropertyOf: 
+        obo:RO_0002566
+    
+    EquivalentTo: 
+        ebro:determines
+    
+    
+ObjectProperty: obo:ECO_9000000
+
+    Annotations: 
+        obo:IAO_0000115 "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence."@en,
+        rdfs:label "used_in"@en
+    
+    
+ObjectProperty: obo:RO_0002506
+
+    Annotations: 
+        rdfs:label "causal relation between entities",
+        rdfs:comment "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect."@en
+    
+    SubPropertyOf: 
+        obo:RO_0002410
+    
+    
+ObjectProperty: obo:RO_0002566
+
+    Annotations: 
+        rdfs:label "causally influences"
+    
+    SubPropertyOf: 
+        obo:RO_0002506
+    
+    EquivalentTo: 
+        ebro:influences
+    
+    
+Class: ebro:EBRO_039
+
+    Annotations: 
+        rdfs:label "Mechanism of action of Chemicals & Drugs"@en,
+        rdfs:comment "An occurrent which unfolds in time"@en,
+        rdfs:comment "Mechanism of action taken by the 'chemicals & drugs'. Under 'mechanism of action' of a treatment, the active ingredients as well as the body’s cells or substances and their interplay are considered."@en,
+        rdfs:comment "Examples are: medical devices like ventilators"@en
+    
+    SubClassOf: 
+        ebro:EBRO_014
+    
+    
+Class: ebro:EBRO_038
+
+    Annotations: 
+        rdfs:label "Physical (spatial) entities"@en,
+        rdfs:comment "Examples are: medical devices or intensive care unit (ICU)"@en
+    
+    SubClassOf: 
+        obo:BFO_0000040
+    
+    
+Class: ebro:EBRO_037
+
+    Annotations: 
+        rdfs:label "Clinical idea"@en
+    
+    SubClassOf: 
+        ontolex:LexicalEntry
+    
+    
+Class: ebro:EBRO_036
+
+    Annotations: 
+        rdfs:label "Candidate n-gram"@en
+    
+    SubClassOf: 
+        ontolex:LexicalEntry
+    
+    
+Class: <http://snomed.info/sct/123038009>
+
+    Annotations: 
+        rdfs:comment "Defined as: Entities that are obtained (usually from patients) for examination or analysis"@en,
+        rdfs:label "Specimen (specimen)"@en
+    
+    SubClassOf: 
+        ebro:EBRO_042
+    
+    
+Class: umls:T063
+
+    Annotations: 
+        rdfs:label "Molecular Biology Research Technique"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T063
+    
+    SubClassOf: 
+        ebro:EBRO_015
+    
+    
+Class: obo:BFO_0000003
+
+    Annotations: 
+        obo:IAO_0000115 "An entity that has temporal parts and that happens, unfolds or develops through time."@en,
+        rdfs:label "occurrent"@en
+    
+    SubClassOf: 
+        obo:BFO_0000001
+    
+    
+Class: ebro:EBRO_032
+
+    Annotations: 
+        rdfs:label "Living Beings"@en
+    
+    SubClassOf: 
+        obo:BFO_0000040
+    
+    
+Class: ebro:BHI_concept
+
+    Annotations: 
+        rdfs:label "BioHealth Informatics (BHI) concept"@en
+    
+    SubClassOf: 
+        ontolex:LexicalConcept
+    
+    
+Class: ebro:EBRO_030
+
+    Annotations: 
+        rdfs:comment "A healthcare problem implies the presence of clinical findings including symptoms, normal/abnormal clinical states, and diagnoses (as in the SNOMED CT hiearchy |Clinical finding|). A healthcare problem implies the presence of 1 or more distinct diseases, disorders, conditions, illnesses in an individual"@en,
+        rdfs:label "Patient's healthcare problem"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_030
+    
+    SubClassOf: 
+        obo:BFO_0000017
+    
+    
+Class: obo:ECO_0007673
+
+    Annotations: 
+        obo:IAO_0000115 "A type of combinatorial evidence in which at least two distinct types of evidence have been integrated automatically."@en,
+        rdfs:label "automatically integrated combinatorial evidence"@en
+    
+    SubClassOf: 
+        obo:ECO_0000212
+    
+    
+Class: umls:T109
+
+    Annotations: 
+        rdfs:label "Organic Chemical"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T109
+    
+    SubClassOf: 
+        ebro:EBRO_040
+    
+    
+Class: pico:Population
+
+    Annotations: 
+        rdfs:label "Population"@en,
+        rdfs:comment "A population defines a group of people/patient in a PICO question."@en
+    
+    EquivalentTo: 
+        ontolex:denotes some pico:Population
+    
+    SubClassOf: 
+        ebro:EBRO_032
+    
+    
+Class: obo:ECO_0000212
+
+    Annotations: 
+        obo:IAO_0000115 "A type of evidence in which at least two distinct types of evidence have been integrated."@en,
+        rdfs:comment "A key aspect of this type of evidence is that two or more pieces of information are combined to generate an emergent type of evidence not possible with the constituent pieces of evidence alone. A combinatorial analysis typically involves incorporation of different types of evidence."@en,
+        rdfs:label "combinatorial evidence"@en
+    
+    SubClassOf: 
+        obo:ECO_0000000
+    
+    
+Class: umls:T040
+
+    Annotations: 
+        rdfs:label "Organism Function"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T040
+    
+    SubClassOf: 
+        umls:T039
+    
+    
+Class: umls:T041
+
+    Annotations: 
+        rdfs:label "Mental Process"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T041
+    
+    SubClassOf: 
+        umls:T040
+    
+    
+Class: umls:T042
+
+    Annotations: 
+        rdfs:label "Organ or Tissue Function"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T042
+    
+    SubClassOf: 
+        umls:T039
+    
+    
+Class: umls:T100
+
+    Annotations: 
+        rdfs:label "Age Group"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T100
+    
+    SubClassOf: 
+        umls:T096
+    
+    
+Class: ebro:EBRO_011
+
+    Annotations: 
+        rdfs:label "Patient"@en
+    
+    SubClassOf: 
+        ebro:EBRO_032,
+        obo:BFO_0000050 some pico:Population
+    
+    
+Class: obo:BFO_0000031
+
+    Annotations: 
+        rdfs:label "generically dependent continuant"@en
+    
+    SubClassOf: 
+        obo:BFO_0000002
+    
+    
+Class: <http://snomed.info/sct/763158003>
+
+    Annotations: 
+        rdfs:comment "The Pharmaceutical / biologic product hierarchy is comprised of multiple smaller hierarchies, e.g. the Medicinal product hierarchy."@en,
+        rdfs:label "Medicinal product (product)"@en
+    
+    SubClassOf: 
+        <http://snomed.info/sct/373873005>
+    
+    
+Class: umls:T059
+
+    Annotations: 
+        rdfs:label "Laboratory Procedure"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T059
+    
+    SubClassOf: 
+        ebro:EBRO_015
+    
+    
+Class: ebro:EBRO_029
+
+    Annotations: 
+        rdfs:comment "the conditions that co-occur"@en,
+        rdfs:label "Patient's coexisting conditions"@en
+    
+    SubClassOf: 
+        ebro:influences some ebro:EBRO_009,
+        ebro:determines some ebro:EBRO_014,
+        ebro:EBRO_030
+    
+    
+Class: ebro:EBRO_028
+
+    Annotations: 
+        rdfs:comment "Any distinct additional entity that has existed or may occur during the clinical course of a patient who has the index disease under study. [PMID: 26309916]. Comorbidities, defined as other chronic medical conditions, including coronary artery disease, diabetes mellitus, osteoporosis and muscle weakness [PMID: 18453370]"@en,
+        rdfs:label "Patient's co-morbidity"@en
+    
+    SubClassOf: 
+        ebro:EBRO_029
+    
+    
+Class: obo:ECO_0000033
+
+    Annotations: 
+        obo:IAO_0000115 "A type of author statement in which the author makes a statement that is not supported by information in that particular publication, but rather can be traced to a reference cited by that publication."@en,
+        rdfs:label "author statement supported by traceable reference"@en
+    
+    SubClassOf: 
+        obo:ECO_0000204
+    
+    
+Class: ebro:EBRO_026
+
+    Annotations: 
+        rdfs:label "Semantic field non-Tx"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: <http://snomed.info/sct/410607006>
+
+    Annotations: 
+        rdfs:comment "Defined as: Organisms of significance to human medicine"@en,
+        rdfs:label "Organism (organism)"@en
+    
+    SubClassOf: 
+        ebro:EBRO_032
+    
+    
+Class: ebro:EBRO_024
+
+    Annotations: 
+        rdfs:comment "the clinical presentation of a disease or illness"@en,
+        rdfs:label "Clinical presentation"@en
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: ebro:EBRO_023
+
+    Annotations: 
+        rdfs:label "Clinical course"@en,
+        rdfs:comment "the clinical course of a disease or illness"@en
+    
+    SubClassOf: 
+        obo:BFO_0000015
+    
+    
+Class: <http://snomed.info/sct/372148003>
+
+    Annotations: 
+        rdfs:comment ""@en,
+        rdfs:label "Ethnic group (ethnic group)"@en
+    
+    SubClassOf: 
+        pico:Population
+    
+    
+Class: ebro:EBRO_021
+
+    Annotations: 
+        rdfs:label "Patient's characteristics and demographics"@en,
+        rdfs:comment "Examples of Patient's characteristics are: age; male; and smoking. Examples under demographics are: higher fatality rate; mortality; and morbidity"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_021
+    
+    SubClassOf: 
+        obo:BFO_0000017,
+        ebro:influences some ebro:EBRO_009
+    
+    
+Class: ebro:EBRO_020
+
+    Annotations: 
+        rdfs:label "Tx with uncertain therapeutic effect"@en
+    
+    SubClassOf: 
+        ebro:EBRO_014
+    
+    
+Class: pico:Condition
+
+    Annotations: 
+        rdfs:label "Condition"@en,
+        rdfs:comment "Conditions for example illness or disease."@en
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: obo:ECO_0000204
+
+    Annotations: 
+        obo:IAO_0000115 "An evidence type that is based on an assertion by the author of a paper, which is read by a curator."@en,
+        rdfs:label "author statement"@en
+    
+    SubClassOf: 
+        obo:ECO_0000000
+    
+    
+Class: obo:ECO_0000203
+
+    Annotations: 
+        obo:IAO_0000115 "An assertion method that does not involve human review."@en,
+        rdfs:label "automatic assertion"@en
+    
+    SubClassOf: 
+        obo:ECO_0000217
+    
+    
+Class: umls:T058
+
+    Annotations: 
+        rdfs:label "Health Care Activity"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T058
+    
+    SubClassOf: 
+        ebro:EBRO_012
+    
+    
+Class: umls:T004
+
+    Annotations: 
+        rdfs:label "Fungus"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T004
+    
+    SubClassOf: 
+        umls:T001
+    
+    
+Class: umls:T101
+
+    Annotations: 
+        rdfs:label "Patient or Disabled Group"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T101
+    
+    SubClassOf: 
+        umls:T096
+    
+    
+Class: ontolex:LexicalEntry
+
+    Annotations: 
+        rdfs:comment "A lexical entry represents a unit of analysis of the lexicon that consists of a set of forms that are grammatically related and a set of base meanings that are associated with all of these forms. Thus, a lexical entry is a word, multiword expression or affix with a single part-of-speech, morphological pattern, etymology and set of senses."@en,
+        rdfs:label "lexical entry"@en
+    
+    SubClassOf: 
+        obo:IAO_0000300
+    
+    
+Class: umls:T191
+
+    Annotations: 
+        rdfs:label "Neoplastic Process"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T191
+    
+    SubClassOf: 
+        umls:T047
+    
+    
+Class: ebro:EBRO_022
+
+    Annotations: 
+        rdfs:label "Tx with unwanted or adverse effects (i.e. non-therapeutic)"@en
+    
+    SubClassOf: 
+        ebro:EBRO_014
+    
+    
+Class: obo:BFO_0000020
+
+    Annotations: 
+        obo:IAO_0000115 "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same."@en,
+        rdfs:label "specifically dependent continuant"@en
+    
+    SubClassOf: 
+        obo:BFO_0000002
+    
+    
+Class: ebro:EBRO_025
+
+    Annotations: 
+        rdfs:label "Semantic field Tx"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: umls:T048
+
+    Annotations: 
+        rdfs:label "Mental or Behavioral Dysfunction"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T048
+    
+    SubClassOf: 
+        umls:T047
+    
+    
+Class: umls:T047
+
+    Annotations: 
+        rdfs:label "Disease or Syndrome"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T047
+    
+    SubClassOf: 
+        umls:T046
+    
+    
+Class: umls:T046
+
+    Annotations: 
+        rdfs:label "Pathologic Function"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T046
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: ebro:EBRO_016
+
+    Annotations: 
+        rdfs:label "Putting on / removing Personal Protective Equipment (PPE)"@en,
+        rdfs:comment "The type of Personal Protective Equipment (PPE) depends on the level of precautions required."@en
+    
+    SubClassOf: 
+        ebro:EBRO_012
+    
+    
+Class: ebro:EBRO_015
+
+    Annotations: 
+        rdfs:comment "All types of tests are eligible, including: signs and symptoms from the patient history and examination; questionnaire-based tools, scores and decision rules; laboratory tests including biochemical, immunological, genetic, genomic and other 'pan-omic' technologies; imaging tests; and physiological measurements. [https://training.cochrane.org/handbook/current/chapter-i]"@en,
+        rdfs:label "Patient's test"@en,
+        rdfs:comment "All types of tests involve actions"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_015
+    
+    SubClassOf: 
+        ebro:EBRO_012
+    
+    
+Class: ebro:EBRO_014
+
+    Annotations: 
+        rdfs:label "Patient's treatment"@en,
+        rdfs:comment "Action taken by a health professional, in the context of contact with a treatment recipient, to alter the functioning of an individual with a disability or at risk of a disability [PMID: 24370323]"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_014
+    
+    SubClassOf: 
+        ebro:EBRO_012,
+        ebro:influences some ebro:EBRO_009
+    
+    
+Class: ebro:EBRO_013
+
+    Annotations: 
+        rdfs:label "NICE guideline"@en
+    
+    SubClassOf: 
+        ebro:EBRO_006
+    
+    
+Class: ebro:EBRO_012
+
+    Annotations: 
+        rdfs:comment "The processes through which patient care is delivered [PMID: 25144047]. Diagnostic or treatment steps to a variety of medical conditions are healthcare processes, including (among others): condition-specific history and physical examinations; laboratory tests; and therapies."@en,
+        rdfs:comment "The process of care is interpreted as an activity, which is an occurrent"@en,
+        rdfs:label "Process of care"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_012
+    
+    SubClassOf: 
+        obo:BFO_0000015
+    
+    
+Class: obo:ECO_0000302
+
+    Annotations: 
+        rdfs:label "author statement used in manual assertion"@en,
+        obo:IAO_0000115 "A type of author statement that is used in a manual assertion."@en
+    
+    EquivalentTo: 
+        obo:ECO_0000204
+         and (obo:ECO_9000000 some obo:ECO_0000218)
+    
+    SubClassOf: 
+        obo:ECO_0000204
+    
+    
+Class: ebro:EBRO_010
+
+    Annotations: 
+        rdfs:comment "Multimorbidity is commonly defined as two or more chronic medical conditions in an individual [PMID: 25646760]"@en,
+        rdfs:label "Patient's multimorbidity"@en
+    
+    SubClassOf: 
+        ebro:EBRO_029
+    
+    
+Class: ebro:EBRO_045
+
+    Annotations: 
+        rdfs:label "Considerations / coexisting conditions in the context of COVID-19 - General medical term"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: ebro:EBRO_046
+
+    Annotations: 
+        rdfs:label "Considerations / coexisting conditions in the context of COVID-19 - the disease itself"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: <http://snomed.info/sct/246061005>
+
+    Annotations: 
+        rdfs:comment "The Concept Model attributes are approved for use. Defined as: A characteristic of the meaning of a concept or the nature of a refinement."@en,
+        rdfs:label "Attribute (attribute)"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: obo:BFO_0000017
+
+    Annotations: 
+        obo:IAO_0000115 "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances."@en,
+        rdfs:label "realizable entity"@en
+    
+    SubClassOf: 
+        obo:BFO_0000020
+    
+    
+Class: ebro:EBRO_048
+
+    Annotations: 
+        rdfs:label "Diagnostic tests / imaging investigations - General medical term"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: obo:BFO_0000015
+
+    Annotations: 
+        rdfs:label "process"@en,
+        obo:IAO_0000115 "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en
+    
+    SubClassOf: 
+        obo:BFO_0000003
+    
+    
+Class: umls:T061
+
+    Annotations: 
+        rdfs:label "Therapeutic or Preventive Procedure"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T061
+    
+    SubClassOf: 
+        ebro:EBRO_014
+    
+    
+Class: obo:ECO_0000218
+
+    Annotations: 
+        rdfs:comment "A manual assertion could be based on evidence that is generated by and interpreted by a human or it could involve human review of computationally generated information."@en,
+        obo:IAO_0000115 "An assertion method that involves human review."@en,
+        rdfs:label "manual assertion"@en
+    
+    SubClassOf: 
+        obo:ECO_0000217
+    
+    
+Class: <http://snomed.info/sct/71388002>
+
+    Annotations: 
+        rdfs:comment "Defined as: activities performed in the provision of health care (includes medical history-taking, physical examination, diagnostic and therapeutic interventions, training and education, and counseling)"@en,
+        rdfs:label "Procedure (procedure)"@en
+    
+    SubClassOf: 
+        ebro:EBRO_012
+    
+    
+Class: ebro:EBRO_033
+
+    Annotations: 
+        rdfs:label "Devices"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_033
+    
+    SubClassOf: 
+        ebro:EBRO_038
+    
+    
+Class: ebro:EBRO_034
+
+    Annotations: 
+        rdfs:label "Correlation"@en,
+        rdfs:comment "it captures 'spontaneous unplanned inferences' [doi: 10.1037/0003-066X.52.1.45]"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: ebro:EBRO_027
+
+    Annotations: 
+        rdfs:comment "NCI definition: Something that increases the chance of developing a disease."@en,
+        rdfs:label "Patient's risk factors"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_027
+    
+    SubClassOf: 
+        obo:BFO_0000017
+    
+    
+Class: umls:T039
+
+    Annotations: 
+        rdfs:label "Physiologic Function"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T039
+    
+    SubClassOf: 
+        umls:T038
+    
+    
+Class: ebro:EBRO_009
+
+    Annotations: 
+        rdfs:comment "the index disease or illness under study"@en,
+        rdfs:label "Patient's condition under study"@en
+    
+    SubClassOf: 
+        pico:Condition,
+        ebro:associatedWith some ebro:EBRO_012,
+        ebro:determines some ebro:EBRO_014,
+        ebro:influences some ebro:EBRO_029
+    
+    
+Class: ebro:EBRO_008
+
+    Annotations: 
+        rdfs:comment ""@en,
+        rdfs:label "Evidence summary"@en
+    
+    SubClassOf: 
+        ebro:EBRO_000
+    
+    
+Class: ebro:EBRO_007
+
+    Annotations: 
+        rdfs:label "NHS specialty guides for patient management"@en
+    
+    SubClassOf: 
+        ebro:EBRO_006
+    
+    
+Class: ebro:EBRO_006
+
+    Annotations: 
+        rdfs:label "Clinical practice guideline"@en
+    
+    SubClassOf: 
+        ebro:EBRO_000
+    
+    
+Class: obo:ECO_0000352
+
+    Annotations: 
+        rdfs:label "evidence used in manual assertion"@en,
+        obo:IAO_0000115 "A type of evidence that is used in an manual assertion."@en
+    
+    EquivalentTo: 
+        obo:ECO_0000000
+         and (obo:ECO_9000000 some obo:ECO_0000218)
+    
+    SubClassOf: 
+        obo:ECO_0000000
+    
+    
+Class: ebro:EBRO_004
+
+    Annotations: 
+        rdfs:label "BMJ Best Practice"@en
+    
+    SubClassOf: 
+        ebro:EBRO_008
+    
+    
+Class: ebro:EBRO_003
+
+    Annotations: 
+        rdfs:label "Cochrane Systematic Review"@en
+    
+    SubClassOf: 
+        ebro:EBRO_001
+    
+    
+Class: ebro:EBRO_002
+
+    Annotations: 
+        rdfs:label "PubMed Central article"@en
+    
+    SubClassOf: 
+        ebro:EBRO_001
+    
+    
+Class: ebro:EBRO_001
+
+    Annotations: 
+        rdfs:label "PubMed article"@en
+    
+    SubClassOf: 
+        ebro:EBRO_000
+    
+    
+Class: ebro:EBRO_000
+
+    Annotations: 
+        rdfs:label "Evidence-based information source"@en,
+        rdfs:comment "Examples are: PubMed article (e.g. Cochrane Systematic Review); clinical summaries (e.g. BMJ Best Practice); and clinical practice guideline (e.g. NHS specialty guides for patient management)"@en
+    
+    SubClassOf: 
+        ebro:recommends some ebro:EBRO_012,
+        obo:IAO_0000310
+         and (obo:RO_0002558 some obo:ECO_0000000),
+        ebro:isAbout some ebro:EBRO_009
+    
+    
+Class: umls:T201
+
+    Annotations: 
+        rdfs:label "Clinical Attribute"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T201
+    
+    SubClassOf: 
+        umls:T032
+    
+    
+Class: umls:T097
+
+    Annotations: 
+        rdfs:label "Professional or Occupational Group"@en
+    
+    SubClassOf: 
+        umls:T096
+    
+    
+Class: umls:T096
+
+    Annotations: 
+        rdfs:label "Group"@en
+    
+    SubClassOf: 
+        pico:Population
+    
+    
+Class: ebro:EBRO_031
+
+    Annotations: 
+        rdfs:label "Considerations"@en,
+        rdfs:comment "the considerations for medical conditions, healthcare processes (e.g. medical investigations or treatments), and types of healthcare"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: <http://snomed.info/sct/243120004>
+
+    Annotations: 
+        rdfs:comment "Defined as: subtype of procedure. Set of procedures focused on a single purpose on one patient over time (e.g. repeated administration of drug in a small dose for an indefinite period of time)"@en,
+        rdfs:label "Regimes and therapies (regime/therapy)"@en
+    
+    SubClassOf: 
+        ebro:EBRO_014
+    
+    
+Class: umls:T093
+
+    Annotations: 
+        rdfs:label "Health Care Related Organization"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T093
+    
+    SubClassOf: 
+        ebro:EBRO_038
+    
+    
+Class: <http://snomed.info/sct/105590001>
+
+    Annotations: 
+        rdfs:label "Substance (substance)"@en,
+        rdfs:comment "Defined as: Active chemical constituents of allergens, agents, substances, chemicals, drugs, and materials (not Pharmaceutical/Biological Products)"@en
+    
+    SubClassOf: 
+        obo:BFO_0000040
+    
+    
+Class: ontolex:LexicalSense
+
+    Annotations: 
+        rdfs:label "lexical sense"@en,
+        rdfs:comment "A lexical sense represents the lexical meaning of a lexical entry when interpreted as referring to the corresponding ontology element. This is used as the ontology entity and lexical entry may not be in one-to-one correspondence as such the existence of a sense between them states meerly that there are some cases when this lexical entry refer to the ontology entity and vica versa. Mapping elements can be used to further specify this relation"@en
+    
+    SubClassOf: 
+        obo:IAO_0000030
+    
+    
+Class: ebro:EBRO_017
+
+    Annotations: 
+        rdfs:label "Potential Tx (under research and development)"@en
+    
+    SubClassOf: 
+        ebro:EBRO_014
+    
+    
+Class: lemon:Lexicon
+
+    Annotations: 
+        rdfs:comment "The lexicon object. This object is specific to the given language and/or domain it describes"@en,
+        rdfs:label "Lexicon"@en
+    
+    SubClassOf: 
+        obo:IAO_0000300
+    
+    
+Class: obo:IAO_0000310
+
+    Annotations: 
+        rdfs:label "document"@en,
+        obo:IAO_0000115 "A collection of information content entities intended to be understood together as a whole"@en
+    
+    SubClassOf: 
+        obo:IAO_0000030
+    
+    
+Class: obo:ECO_0000245
+
+    Annotations: 
+        obo:IAO_0000115 "A type of automatically integrated combinatorial evidence that is used in a manual assertion."@en,
+        rdfs:label "automatically integrated combinatorial evidence used in manual assertion"@en
+    
+    EquivalentTo: 
+        obo:ECO_0007673
+         and (obo:ECO_9000000 some obo:ECO_0000218)
+    
+    SubClassOf: 
+        obo:ECO_0000244
+    
+    
+Class: obo:ECO_0000244
+
+    Annotations: 
+        rdfs:label "combinatorial evidence used in manual assertion"@en,
+        obo:IAO_0000115 "A type of combinatorial analysis that is used in a manual assertion."@en
+    
+    EquivalentTo: 
+        obo:ECO_0000212
+         and (obo:ECO_9000000 some obo:ECO_0000218)
+    
+    SubClassOf: 
+        obo:ECO_0000212
+    
+    
+Class: obo:BFO_0000002
+
+    Annotations: 
+        rdfs:label "continuant"@en
+    
+    SubClassOf: 
+        obo:BFO_0000001
+    
+    
+Class: obo:BFO_0000001
+
+    Annotations: 
+        rdfs:label "entity"@en
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: ebro:EBRO_043
+
+    Annotations: 
+        rdfs:label "Clinical presentation / symptoms - General medical term"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: <http://snomed.info/sct/276339004>
+
+    Annotations: 
+        rdfs:label "Environment (environment)"@en,
+        rdfs:comment "Defined as: types of environments"@en
+    
+    SubClassOf: 
+        ebro:EBRO_038
+    
+    
+Class: umls:T060
+
+    Annotations: 
+        rdfs:label "Diagnostic Procedure"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T060
+    
+    SubClassOf: 
+        ebro:EBRO_015
+    
+    
+Class: ebro:EBRO_035
+
+    Annotations: 
+        rdfs:comment "it includes broad concepts of little value for clinicians that do not need further evidence"@en,
+        rdfs:label "General medical term"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: ebro:EBRO_047
+
+    Annotations: 
+        rdfs:label "Considerations / coexisting conditions in the context of COVID-19"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: <http://snomed.info/sct/419891008>
+
+    Annotations: 
+        rdfs:comment "Defined as: Clinical documents, or parts thereof"@en,
+        rdfs:label "Record artifact (record artifact)"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: ebro:EBRO_049
+
+    Annotations: 
+        rdfs:label "Diagnostic tests / imaging investigations"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: <http://snomed.info/sct/363787002>
+
+    Annotations: 
+        rdfs:label "Observable entity (observable entity)"@en,
+        rdfs:comment "Defined as: Information about a quality/property to be observed and how it will be observed"@en
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: umls:T195
+
+    Annotations: 
+        rdfs:label "Antibiotic"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T195
+    
+    SubClassOf: 
+        umls:T121
+    
+    
+Class: umls:T020
+
+    Annotations: 
+        rdfs:label "Acquired Abnormality"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T020
+    
+    SubClassOf: 
+        umls:T190
+    
+    
+Class: obo:ECO_0000000
+
+    Annotations: 
+        rdfs:label "evidence"@en,
+        obo:IAO_0000115 "A type of information that is used to support an assertion."@en
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: umls:T001
+
+    Annotations: 
+        rdfs:label "Organism"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T001
+    
+    SubClassOf: 
+        ebro:EBRO_032
+    
+    
+Class: umls:T190
+
+    Annotations: 
+        rdfs:label "Anatomical Abnormality"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T190
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: obo:IAO_0000308
+
+    Annotations: 
+        rdfs:comment "Any picture, diagram or table"@en,
+        rdfs:label "figure"@en
+    
+    SubClassOf: 
+        obo:IAO_0000030
+    
+    
+Class: <http://snomed.info/sct/404684003>
+
+    Annotations: 
+        rdfs:label "Clinical finding (finding)"@en,
+        rdfs:comment "Defined as: normal/abnormal observations, judgments, or assessments of patients"@en
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: umls:MTHconcept
+
+    Annotations: 
+        rdfs:label "UMLS Metathesaurus concept"@en
+    
+    SubClassOf: 
+        ontolex:LexicalConcept
+    
+    
+Class: ebro:EBRO_053
+
+    Annotations: 
+        rdfs:label "Treatment / Treatment ingredients"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: ebro:EBRO_052
+
+    Annotations: 
+        rdfs:label "Treatment / Treatment ingredients - General medical term"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: ebro:EBRO_051
+
+    Annotations: 
+        rdfs:label "Diagnostic tests / laboratory investigations"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: ebro:EBRO_050
+
+    Annotations: 
+        rdfs:label "Diagnostic tests / laboratory investigations - General medical term"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: owl:Thing
+
+    
+Class: obo:IAO_0000300
+
+    Annotations: 
+        rdfs:label "textual entity"@en
+    
+    SubClassOf: 
+        obo:IAO_0000030
+    
+    
+Class: skos:Concept
+
+    Annotations: 
+        obo:IAO_0000115 "An idea or notion; a unit of thought."@en,
+        rdfs:label "concept"@en
+    
+    SubClassOf: 
+        obo:IAO_0000300
+    
+    
+Class: umls:T122
+
+    Annotations: 
+        rdfs:label "Biomedical or Dental Material"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T122
+    
+    SubClassOf: 
+        ebro:EBRO_040
+    
+    
+Class: umls:T007
+
+    Annotations: 
+        rdfs:label "Bacterium"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T007
+    
+    SubClassOf: 
+        umls:T001
+    
+    
+Class: umls:T123
+
+    Annotations: 
+        rdfs:label "Biologically Active Substance"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T123
+    
+    SubClassOf: 
+        ebro:EBRO_040
+    
+    
+Class: umls:T019
+
+    Annotations: 
+        rdfs:label "Congenital Abnormality"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T019
+    
+    SubClassOf: 
+        umls:T190
+    
+    
+Class: umls:T121
+
+    Annotations: 
+        rdfs:label "Pharmacologic Substance"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T121
+    
+    SubClassOf: 
+        ebro:EBRO_040
+    
+    
+Class: <http://snomed.info/sct/64572001>
+
+    Annotations: 
+        rdfs:label "Disease (disorder)"@en,
+        rdfs:comment "Defined as: always and necessarily an abnormal clinical state"@en
+    
+    SubClassOf: 
+        <http://snomed.info/sct/404684003>
+    
+    
+Class: obo:BFO_0000004
+
+    Annotations: 
+        rdfs:label "independent continuant"@en,
+        obo:IAO_0000115 "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])"@en
+    
+    SubClassOf: 
+        obo:BFO_0000002
+    
+    
+Class: umls:T184
+
+    Annotations: 
+        rdfs:label "Sign or Symptom"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T184
+    
+    SubClassOf: 
+        umls:T033
+    
+    
+Class: obo:ECO_0000217
+
+    Annotations: 
+        obo:IAO_0000115 "A means by which a statement is made about an entity."@en,
+        rdfs:label "assertion method"@en
+    
+    EquivalentTo: 
+        obo:ECO_0000203 or obo:ECO_0000218
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: <http://snomed.info/sct/373873005>
+
+    Annotations: 
+        rdfs:comment "Defined as: A top-level hierarchy to clearly distinguish drug products (products) from their chemical constituents (substances)"@en,
+        rdfs:label "Pharmaceutical / biologic product (product)"@en
+    
+    SubClassOf: 
+        ebro:EBRO_040
+    
+    
+Class: ebro:EBRO_018
+
+    Annotations: 
+        rdfs:label "Tx ingredient"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: ontolex:ConceptSet
+
+    Annotations: 
+        rdfs:comment "A concept set represents a collection of lexical concepts."@en,
+        rdfs:label "concept set"@en
+    
+    SubClassOf: 
+        skos:ConceptScheme
+    
+    
+Class: <http://snomed.info/sct/138875005>
+
+    Annotations: 
+        rdfs:label "SNOMED CT Concept (SNOMED RT+CTV3)"@en
+    
+    SubClassOf: 
+        ontolex:LexicalConcept
+    
+    
+Class: umls:T074
+
+    Annotations: 
+        rdfs:label "Medical Device"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T074
+    
+    SubClassOf: 
+        ebro:EBRO_033
+    
+    
+Class: ebro:EBRO_044
+
+    Annotations: 
+        rdfs:label "Clinical presentation / symptoms"@en
+    
+    SubClassOf: 
+        ontolex:LexicalSense
+    
+    
+Class: ebro:EBRO_019
+
+    Annotations: 
+        rdfs:label "Tx with therapeutic effect"@en
+    
+    SubClassOf: 
+        ebro:EBRO_014
+    
+    
+Class: ebro:EBRO_042
+
+    Annotations: 
+        rdfs:label "Body Fluids/Tissue & Specimens"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_042
+    
+    SubClassOf: 
+        obo:BFO_0000040
+    
+    
+Class: ebro:EBRO_041
+
+    Annotations: 
+        rdfs:comment "Examples are: body parts including physical (spatial) locations. Examples are: Structure of lower lobe of lung; and Maculopapular"@en,
+        rdfs:label "Anatomy & Locus"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_041
+    
+    SubClassOf: 
+        obo:BFO_0000040
+    
+    
+Class: ebro:EBRO_040
+
+    Annotations: 
+        rdfs:comment "some UMLS Semantic Types are included as subtypes"@en,
+        rdfs:label "Chemicals & Drugs"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some ebro:EBRO_040
+    
+    SubClassOf: 
+        obo:BFO_0000040
+    
+    
+Class: obo:IAO_0000030
+
+    Annotations: 
+        rdfs:label "information content entity"@en,
+        obo:IAO_0000115 "A generically dependent continuant that is about some thing."@en
+    
+    SubClassOf: 
+        obo:BFO_0000031
+    
+    
+Class: umls:T116
+
+    Annotations: 
+        rdfs:label "Amino Acid, Peptide, or Protein"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T116
+    
+    SubClassOf: 
+        ebro:EBRO_040
+    
+    
+Class: <http://snomed.info/sct/125676002>
+
+    Annotations: 
+        rdfs:label "Person (person)"@en
+    
+    SubClassOf: 
+        ebro:EBRO_032
+    
+    
+Class: umls:T098
+
+    Annotations: 
+        rdfs:label "Population Group"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T098
+    
+    SubClassOf: 
+        umls:T096
+    
+    
+Class: umls:T032
+
+    Annotations: 
+        rdfs:label "Organism Attribute"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T032
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: umls:T033
+
+    Annotations: 
+        rdfs:label "Finding"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T033
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: umls:T034
+
+    Annotations: 
+        rdfs:label "Laboratory or Test Result"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T034
+    
+    SubClassOf: 
+        umls:T033
+    
+    
+Class: umls:T005
+
+    Annotations: 
+        rdfs:label "Virus"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T005
+    
+    SubClassOf: 
+        umls:T001
+    
+    
+Class: skos:ConceptScheme
+
+    Annotations: 
+        rdfs:comment "A concept scheme may be defined to include concepts from different sources. Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies."@en,
+        rdfs:label "concept scheme"@en,
+        obo:IAO_0000115 "A set of concepts, optionally including statements about semantic relationships between those concepts."@en
+    
+    SubClassOf: 
+        obo:IAO_0000300
+    
+    
+Class: umls:T037
+
+    Annotations: 
+        rdfs:label "Injury or Poisoning"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T037
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: umls:T038
+
+    Annotations: 
+        rdfs:label "Biologic Function"@en
+    
+    EquivalentTo: 
+        ontolex:denotes some umls:T038
+    
+    SubClassOf: 
+        ebro:EBRO_030
+    
+    
+Class: obo:BFO_0000040
+
+    Annotations: 
+        obo:IAO_0000115 "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."@en,
+        rdfs:label "material entity"@en
+    
+    SubClassOf: 
+        obo:BFO_0000004
+    
+    
+Class: ontolex:LexicalConcept
+
+    Annotations: 
+        rdfs:comment "A lexical concept represents a mental abstraction, concept or unit of thought that embodies the meaning of one or more lexical entries."@en,
+        rdfs:label "lexical concept"@en
+    
+    SubClassOf: 
+        skos:Concept
+    
+    
+Class: ebro:EBRO_005
+
+    Annotations: 
+        rdfs:label "UpToDate"@en
+    
+    SubClassOf: 
+        ebro:EBRO_008
+    
+    
